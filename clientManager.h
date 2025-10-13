@@ -10,7 +10,7 @@ class clientManager{
 		
 			static inline map<string, int> clients;
 			static inline bool salir=false;
-			
+
 			static void addClient(string nombre, int clientId);
 			static void broadcastMessages(string nombre, string msg);
 			static void atiendeCliente(int clientId);

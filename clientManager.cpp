@@ -20,7 +20,6 @@ void clientManager::addClient(string nombre, int clientId){
 
 void clientManager::createTextMessage(vector<unsigned char> &buffer, DATA_STRUCT msg)
 {
-   msg.type = chat_message;
   if (msg.body == "exit()") msg.type = chat_closed;
   if (msg.end_user != "unknown") msg.type = chat_private;
 
@@ -112,6 +111,7 @@ void clientManager::atiendeCliente(int clientId)
 				addClient(nombre, clientId);
 				broadcastMessages(nombre, msg);
 			} break;
+
 			case chat_closed:
 			{
         // es de buena educacion despedirse....
@@ -134,6 +134,17 @@ void clientManager::atiendeCliente(int clientId)
         std::cout << "[Whisper from " <<  nombre << "]:" << msg << " [Sent to -> " << reciever << "]\n";
 				addClient(nombre, clientId);
         sendToSpecificUser(my_struct);
+      } break;
+
+      case server_hello:
+      {
+				std::string nombre, msg, reciever;
+	      DATA_STRUCT my_struct(nombre, reciever, msg, server_hello);	
+        unpackTextMessage(buffer, my_struct); 
+        addClient(nombre, clientId);
+        cout << endl <<"Succesfully established connection with user: " << nombre << " ID: " << clientId << endl;
+        buffer.clear();
+
       } break;
 
 			default:{

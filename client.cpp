@@ -54,7 +54,12 @@ void receiveTextFromServer(int serverId)
         decrpyt(13, msg);          
 			  cout<<"[Whisper from " <<nombre<<"]:"<<msg<<"\n";	 	    
       } break;
-      
+     
+      case server_hello:
+      {
+          cout << "[Succesfully connected to server]" << endl;
+      } break;
+
       default:
       {
         cout << "Woops, unexpected msg type" << endl;
@@ -71,8 +76,7 @@ int main(int argc,char** argv)
 	std::string nombre, msg;
 	std::vector<unsigned char> buffer;
 
-	auto connection=initClient("127.0.0.1",3000);
-	
+	auto connection=initClient("127.0.0.1", 3000);
 	//pedir nombre de usuario por terminal
 	std::cout<<"Introduzca nombre de usuario\n";
 	
@@ -80,15 +84,21 @@ int main(int argc,char** argv)
 	std::getline(std::cin, nombre);
 	//lanzar hilo recepción de mensajes de servidor
 	thread *th=new thread(receiveTextFromServer,connection.serverId);
+
+  
+  string end_user = "unknown";
+  string msg_to_server = "hi there server!";
+  
+  DATA_STRUCT my_struct(nombre, end_user, msg_to_server, server_hello);
+  clientManager::createTextMessage(buffer, my_struct);
+	sendMSG(connection.serverId,buffer);
+
+  buffer.clear();
 	
-	//bucle hasta escribir exit()
-	do
+  do
   {
-		//pedir mensaje por terminal
 		std::cout<<"Introduzca mensaje\n";
-		//guardar
 		std::getline(std::cin, msg);
-		
 		buffer.clear();
 		if(msg!="exit()"){		
 	

@@ -13,7 +13,9 @@ int main(int argc, char** argv)
 	int serverSocketID = initServer(3000);
 	std::vector<unsigned char> buffer;
 	//esperar conexion
-	std::cout << "Esperando conexión en puerto 3000...\n";
+
+
+  std::cout << "Esperando conexión en puerto 3000...\n";
 	while(1){
 		while(!checkClient()) usleep(100);
 

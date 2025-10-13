@@ -8,6 +8,8 @@ typedef enum {
 	chat_message = 0,
 	chat_closed = 1,
   chat_private = 2,
+  server_hello = 3, // se usa para la primera conexion entre cliente y servidor, de tal forma, que el cliente
+                    // sea incluido en la lista de clientes sin necesidad que este escriba un mensaje
 } msgType;
 
 typedef struct DATA_STRUCT
