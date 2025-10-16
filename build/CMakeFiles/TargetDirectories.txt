@@ -1,4 +1,4 @@
-/home/gordomasonico/workspace/Universidad/notdone/build/CMakeFiles/server.dir
-/home/gordomasonico/workspace/Universidad/notdone/build/CMakeFiles/client.dir
-/home/gordomasonico/workspace/Universidad/notdone/build/CMakeFiles/edit_cache.dir
-/home/gordomasonico/workspace/Universidad/notdone/build/CMakeFiles/rebuild_cache.dir
+/home/larry/workspace/UNIVERSIDAD/Universidad/SIS_DISTRIBUIDOS/messageService/build/CMakeFiles/server.dir
+/home/larry/workspace/UNIVERSIDAD/Universidad/SIS_DISTRIBUIDOS/messageService/build/CMakeFiles/client.dir
+/home/larry/workspace/UNIVERSIDAD/Universidad/SIS_DISTRIBUIDOS/messageService/build/CMakeFiles/edit_cache.dir
+/home/larry/workspace/UNIVERSIDAD/Universidad/SIS_DISTRIBUIDOS/messageService/build/CMakeFiles/rebuild_cache.dir

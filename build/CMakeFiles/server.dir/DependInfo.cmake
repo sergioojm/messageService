@@ -8,10 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/gordomasonico/workspace/Universidad/notdone/clientManager.cpp" "CMakeFiles/server.dir/clientManager.cpp.o" "gcc" "CMakeFiles/server.dir/clientManager.cpp.o.d"
-  "/home/gordomasonico/workspace/Universidad/notdone/server.cpp" "CMakeFiles/server.dir/server.cpp.o" "gcc" "CMakeFiles/server.dir/server.cpp.o.d"
-  "/home/gordomasonico/workspace/Universidad/notdone/utils.cpp" "CMakeFiles/server.dir/utils.cpp.o" "gcc" "CMakeFiles/server.dir/utils.cpp.o.d"
-  "" "server" "gcc" "CMakeFiles/server.dir/link.d"
+  "/home/larry/workspace/UNIVERSIDAD/Universidad/SIS_DISTRIBUIDOS/messageService/clientManager.cpp" "CMakeFiles/server.dir/clientManager.cpp.o" "gcc" "CMakeFiles/server.dir/clientManager.cpp.o.d"
+  "/home/larry/workspace/UNIVERSIDAD/Universidad/SIS_DISTRIBUIDOS/messageService/server.cpp" "CMakeFiles/server.dir/server.cpp.o" "gcc" "CMakeFiles/server.dir/server.cpp.o.d"
+  "/home/larry/workspace/UNIVERSIDAD/Universidad/SIS_DISTRIBUIDOS/messageService/utils.cpp" "CMakeFiles/server.dir/utils.cpp.o" "gcc" "CMakeFiles/server.dir/utils.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

@@ -76,13 +76,23 @@ int main(int argc,char** argv)
 	std::string nombre, msg;
 	std::vector<unsigned char> buffer;
 
-	auto connection=initClient("127.0.0.1", 3000);
-	//pedir nombre de usuario por terminal
-	std::cout<<"Introduzca nombre de usuario\n";
+  string host = "127.0.0.1";
+  if (argc > 1) {
+     host = argv[1];
+  }   
+
+  cout << "Intentando conectar a " << host << "..." << endl;
+	auto connection=initClient(host, 3000);
 	
-	//guardar nombre
+  if (connection.socket < 0) 
+  {
+    cout << "Failed to connect to " << host << ":3000" << endl;
+    return 1; 
+  }
+	std::cout<<"Introduzca nombre de usuario\n";
 	std::getline(std::cin, nombre);
-	//lanzar hilo recepción de mensajes de servidor
+
+  //lanzar hilo recepción de mensajes de servidor
 	thread *th=new thread(receiveTextFromServer,connection.serverId);
 
   

@@ -1,1 +1,1 @@
-/usr/bin/c++ -g -Wl,--dependency-file=CMakeFiles/client.dir/link.d CMakeFiles/client.dir/utils.cpp.o CMakeFiles/client.dir/client.cpp.o CMakeFiles/client.dir/clientManager.cpp.o -o client  -lpthread
+/usr/bin/c++ -g CMakeFiles/client.dir/utils.cpp.o CMakeFiles/client.dir/client.cpp.o CMakeFiles/client.dir/clientManager.cpp.o -o client  -lpthread 
