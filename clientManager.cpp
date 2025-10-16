@@ -78,12 +78,10 @@ void clientManager::sendToSpecificUser(DATA_STRUCT msg)
   createTextMessage(buffer, msg);
   if (buffer.size() <= 0) return;
 
-  for (auto &client : clients)
+  auto client = clients.find(msg.end_user);
+  if (client != clients.end())
   {
-    if (client.first == msg.end_user && msg.end_user != msg.sender)
-    {
-      sendMSG(client.second, buffer);
-    }
+    sendMSG(client->second, buffer);
   }
 } 
 
